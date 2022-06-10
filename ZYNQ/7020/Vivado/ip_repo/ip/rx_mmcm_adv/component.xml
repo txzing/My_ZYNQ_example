@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spirit:component xmlns:xilinx="http://www.xilinx.com" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <spirit:vendor>user.org</spirit:vendor>
+  <spirit:library>user</spirit:library>
+  <spirit:name>rx_mmcm_adv</spirit:name>
+  <spirit:version>1.0</spirit:version>
+  <spirit:busInterfaces>
+    <spirit:busInterface>
+      <spirit:name>RST</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RST</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>RST</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>POLARITY</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.RST.POLARITY">ACTIVE_HIGH</spirit:value>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>CLKIN1</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>CLK</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>CLKIN1</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>FREQ_HZ</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.CLKIN1.FREQ_HZ"/>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_BUSIF</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.CLKIN1.ASSOCIATED_BUSIF">CLKIN1</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_RESET</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.CLKIN1.ASSOCIATED_RESET">RST</spirit:value>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+  </spirit:busInterfaces>
+  <spirit:model>
+    <spirit:views>
+      <spirit:view>
+        <spirit:name>xilinx_anylanguagesynthesis</spirit:name>
+        <spirit:displayName>Synthesis</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:synthesis</spirit:envIdentifier>
+        <spirit:language>Verilog</spirit:language>
+        <spirit:modelName>rx_mmcm_adv</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagesynthesis_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>debd2f72</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_anylanguagebehavioralsimulation</spirit:name>
+        <spirit:displayName>Simulation</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:simulation</spirit:envIdentifier>
+        <spirit:language>Verilog</spirit:language>
+        <spirit:modelName>rx_mmcm_adv</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>debd2f72</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_xpgui</spirit:name>
+        <spirit:displayName>UI Layout</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:xgui.ui</spirit:envIdentifier>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_xpgui_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>94bcb9ec</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+    </spirit:views>
+    <spirit:ports>
+      <spirit:port>
+        <spirit:name>RST</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>CLKIN1</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>status</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">6</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>LOCKED</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>rxclk_div</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>rxclk</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+    </spirit:ports>
+    <spirit:modelParameters>
+      <spirit:modelParameter xsi:type="spirit:nameValueTypeType" spirit:dataType="integer">
+        <spirit:name>MMCM_MODE</spirit:name>
+        <spirit:displayName>Mmcm Mode</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.MMCM_MODE">1</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="signed">
+        <spirit:name>CLKIN_PERIOD</spirit:name>
+        <spirit:displayName>Clkin Period</spirit:displayName>
+        <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.CLKIN_PERIOD">6</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="string">
+        <spirit:name>USE_PLL</spirit:name>
+        <spirit:displayName>Use Pll</spirit:displayName>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.USE_PLL">FALSE</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="string">
+        <spirit:name>PIXEL_CLOCK</spirit:name>
+        <spirit:displayName>Pixel Clock</spirit:displayName>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.PIXEL_CLOCK">BUF_R</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="string">
+        <spirit:name>SAMPL_CLOCK</spirit:name>
+        <spirit:displayName>Sampl Clock</spirit:displayName>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.SAMPL_CLOCK">BUFIO</spirit:value>
+      </spirit:modelParameter>
+    </spirit:modelParameters>
+  </spirit:model>
+  <spirit:choices>
+    <spirit:choice>
+      <spirit:name>choice_list_243b8be5</spirit:name>
+      <spirit:enumeration>BUF_G</spirit:enumeration>
+      <spirit:enumeration>BUF_H</spirit:enumeration>
+      <spirit:enumeration>BUFIO</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
+      <spirit:name>choice_list_39bb4d31</spirit:name>
+      <spirit:enumeration>BUF_G</spirit:enumeration>
+      <spirit:enumeration>BUF_R</spirit:enumeration>
+      <spirit:enumeration>BUF_H</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
+      <spirit:name>choice_list_8aad6ae4</spirit:name>
+      <spirit:enumeration>1</spirit:enumeration>
+      <spirit:enumeration>2</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
+      <spirit:name>choice_list_d10f4555</spirit:name>
+      <spirit:enumeration>FALSE</spirit:enumeration>
+      <spirit:enumeration>TRUE</spirit:enumeration>
+    </spirit:choice>
+  </spirit:choices>
+  <spirit:fileSets>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagesynthesis_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>rx_mmcm_adv.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>CHECKSUM_debd2f72</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>rx_mmcm_adv.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_xpgui_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>xgui/rx_mmcm_adv_v1_0.tcl</spirit:name>
+        <spirit:fileType>tclSource</spirit:fileType>
+        <spirit:userFileType>CHECKSUM_94bcb9ec</spirit:userFileType>
+        <spirit:userFileType>XGUI_VERSION_2</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
+  </spirit:fileSets>
+  <spirit:description>rx_mmcm_adv_v1_0</spirit:description>
+  <spirit:parameters>
+    <spirit:parameter>
+      <spirit:name>MMCM_MODE</spirit:name>
+      <spirit:displayName>Mmcm Mode</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.MMCM_MODE" spirit:choiceRef="choice_list_8aad6ae4">1</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>CLKIN_PERIOD</spirit:name>
+      <spirit:displayName>Clkin Period</spirit:displayName>
+      <spirit:value spirit:format="float" spirit:resolve="user" spirit:id="PARAM_VALUE.CLKIN_PERIOD">6</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>USE_PLL</spirit:name>
+      <spirit:displayName>Use Pll</spirit:displayName>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.USE_PLL" spirit:choiceRef="choice_list_d10f4555">FALSE</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>PIXEL_CLOCK</spirit:name>
+      <spirit:displayName>Pixel Clock</spirit:displayName>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PIXEL_CLOCK" spirit:choiceRef="choice_list_39bb4d31">BUF_R</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>SAMPL_CLOCK</spirit:name>
+      <spirit:displayName>Sampl Clock</spirit:displayName>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.SAMPL_CLOCK" spirit:choiceRef="choice_list_243b8be5">BUFIO</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>Component_Name</spirit:name>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">rx_mmcm_adv_v1_0</spirit:value>
+    </spirit:parameter>
+  </spirit:parameters>
+  <spirit:vendorExtensions>
+    <xilinx:coreExtensions>
+      <xilinx:supportedFamilies>
+        <xilinx:family xilinx:lifeCycle="Production">virtex7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">qvirtex7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">kintex7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">kintex7l</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">qkintex7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">qkintex7l</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">artix7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">artix7l</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">aartix7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">qartix7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">zynq</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">qzynq</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">azynq</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">spartan7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">aspartan7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">virtexu</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">zynquplus</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">virtexuplus</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">virtexuplusHBM</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">virtexuplus58g</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">kintexuplus</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">kintexu</xilinx:family>
+      </xilinx:supportedFamilies>
+      <xilinx:taxonomies>
+        <xilinx:taxonomy>/UserIP</xilinx:taxonomy>
+      </xilinx:taxonomies>
+      <xilinx:displayName>rx_mmcm_adv_v1_0</xilinx:displayName>
+      <xilinx:definitionSource>package_project</xilinx:definitionSource>
+      <xilinx:coreRevision>4</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2021-10-17T16:13:31Z</xilinx:coreCreationDateTime>
+      <xilinx:tags>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@58c4a944_ARCHIVE_LOCATION">/home/andy/workdir/figkey/MAX96752/archive/tmp/vivado/ip_repo/ip/rx_mmcm_adv/project_1/project_1.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@577a9db6_ARCHIVE_LOCATION">/home/andy/workdir/figkey/MAX96752/archive/tmp/vivado/ip_repo/ip/rx_mmcm_adv/project_1/project_1.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@726f189b_ARCHIVE_LOCATION">/home/andy/workdir/figkey/MAX96752/archive/tmp/vivado/ip_repo/ip/rx_mmcm_adv/project_1/project_1.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5718cfd8_ARCHIVE_LOCATION">/home/andy/workdir/figkey/MAX96752/archive/tmp/vivado/ip_repo/ip/rx_mmcm_adv/project_1/project_1.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a76474a_ARCHIVE_LOCATION">/home/andy/workdir/figkey/MAX96752/archive/tmp/vivado/ip_repo/ip/rx_mmcm_adv/project_1/project_1.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@46ae48f8_ARCHIVE_LOCATION">/home/andy/workdir/figkey/MAX96752/archive/tmp/vivado/ip_repo/ip/rx_mmcm_adv/project_1/project_1.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6583771f_ARCHIVE_LOCATION">/home/andy/workdir/figkey/MAX96752/archive/tmp/vivado/ip_repo/ip/rx_mmcm_adv/project_1/project_1.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@331fd8be_ARCHIVE_LOCATION">/home/andy/workdir/figkey/MAX96752/archive/tmp/vivado/ip_repo/ip/rx_mmcm_adv/project_1/project_1.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2fca03c8_ARCHIVE_LOCATION">/home/andy/workdir/figkey/MAX96752/archive/tmp/vivado/ip_repo/ip/rx_mmcm_adv/project_1/project_1.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4f62f82c_ARCHIVE_LOCATION">/home/andy/workdir/figkey/MAX96752/archive/tmp/vivado/ip_repo/ip/rx_mmcm_adv/project_1/project_1.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@ea61e0d_ARCHIVE_LOCATION">/home/andy/workdir/figkey/MAX96752/archive/tmp/vivado/ip_repo/ip/rx_mmcm_adv/project_1/project_1.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3c12f8b2_ARCHIVE_LOCATION">/home/andy/workdir/figkey/MAX96752/archive/tmp/vivado/ip_repo/ip/rx_mmcm_adv/project_1/project_1.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@79b0422_ARCHIVE_LOCATION">/home/andy/workdir/figkey/MAX96752/archive/tmp/vivado/ip_repo/ip/rx_mmcm_adv/project_1/project_1.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@394903fe_ARCHIVE_LOCATION">/home/andy/workdir/figkey/MAX96752/archive/tmp/vivado/ip_repo/ip/rx_mmcm_adv/project_1/project_1.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ffdeaf8_ARCHIVE_LOCATION">/home/andy/workdir/figkey/MAX96752/archive/tmp/vivado/ip_repo/ip/rx_mmcm_adv/project_1/project_1.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@14039862_ARCHIVE_LOCATION">/home/andy/workdir/figkey/MAX96752/archive/tmp/vivado/ip_repo/ip/rx_mmcm_adv/project_1/project_1.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@690b9006_ARCHIVE_LOCATION">/home/andy/workdir/figkey/MAX96752/archive/tmp/vivado/ip_repo/ip/rx_mmcm_adv/project_1/project_1.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@250e5142_ARCHIVE_LOCATION">/home/andy/workdir/figkey/MAX96752/archive/tmp/vivado/ip_repo/ip/rx_mmcm_adv/project_1/project_1.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@264fec2a_ARCHIVE_LOCATION">/home/andy/workdir/figkey/MAX96752/archive/tmp/vivado/ip_repo/ip/rx_mmcm_adv/project_1/project_1.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@71579fde_ARCHIVE_LOCATION">/home/andy/workdir/figkey/MAX96752/archive/tmp/vivado/ip_repo/ip/rx_mmcm_adv/project_1/project_1.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6c26066a_ARCHIVE_LOCATION">/home/andy/workdir/figkey/MAX96752/archive/tmp/vivado/ip_repo/ip/rx_mmcm_adv/project_1/project_1.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@35ffa688_ARCHIVE_LOCATION">/home/andy/workdir/figkey/MAX96752/archive/tmp/vivado/ip_repo/ip/rx_mmcm_adv/project_1/project_1.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@503328a0_ARCHIVE_LOCATION">/home/andy/workdir/figkey/MAX96752/archive/tmp/vivado/ip_repo/ip/rx_mmcm_adv/project_1/project_1.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@425a5ced_ARCHIVE_LOCATION">/home/andy/workdir/figkey/MAX96752/archive/tmp/vivado/ip_repo/ip/rx_mmcm_adv/project_1/project_1.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@34b8c3fc_ARCHIVE_LOCATION">/home/andy/workdir/figkey/MAX96752/archive/tmp/vivado/ip_repo/ip/rx_mmcm_adv/project_1/project_1.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7571c3c_ARCHIVE_LOCATION">/home/andy/workdir/figkey/MAX96752/archive/tmp/vivado/ip_repo/ip/rx_mmcm_adv/project_1/project_1.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@50d6e4f0_ARCHIVE_LOCATION">/home/andy/workdir/figkey/MAX96752/archive/tmp/vivado/ip_repo/ip/rx_mmcm_adv/project_1/project_1.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@e771ba0_ARCHIVE_LOCATION">/home/andy/workdir/figkey/MAX96752/archive/tmp/vivado/ip_repo/ip/rx_mmcm_adv/project_1/project_1.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7c859f32_ARCHIVE_LOCATION">/home/andy/workdir/figkey/MAX96752/archive/tmp/vivado/ip_repo/ip/rx_mmcm_adv/project_1/project_1.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@284e56c6_ARCHIVE_LOCATION">/home/andy/workdir/figkey/MAX96752/archive/tmp/vivado/ip_repo/ip/rx_mmcm_adv/project_1/project_1.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2b889c2d_ARCHIVE_LOCATION">/home/andy/workdir/figkey/MAX96752/archive/tmp/vivado/ip_repo/ip/rx_mmcm_adv/project_1/project_1.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@31b2f031_ARCHIVE_LOCATION">/home/andy/workdir/figkey/MAX96752/archive/tmp/vivado/ip_repo/ip/rx_mmcm_adv/project_1/project_1.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@15abbabf_ARCHIVE_LOCATION">/home/andy/workdir/figkey/MAX96752/archive/tmp/vivado/ip_repo/ip/rx_mmcm_adv/project_1/project_1.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f5c68ad_ARCHIVE_LOCATION">/home/andy/workdir/figkey/MAX96752/archive/tmp/vivado/ip_repo/ip/rx_mmcm_adv/project_1/project_1.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@22389570_ARCHIVE_LOCATION">/home/andy/workdir/figkey/MAX96752/archive/tmp/vivado/ip_repo/ip/rx_mmcm_adv/project_1/project_1.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@24c800c_ARCHIVE_LOCATION">/home/andy/workdir/figkey/MAX96752/archive/tmp/vivado/ip_repo/ip/rx_mmcm_adv/project_1/project_1.srcs/sources_1/new</xilinx:tag>
+      </xilinx:tags>
+    </xilinx:coreExtensions>
+    <xilinx:packagingInfo>
+      <xilinx:xilinxVersion>2018.3</xilinx:xilinxVersion>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="9981ffb2"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="81fbfdd1"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="79969b8a"/>
+      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="4b55e6dd"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="a4113490"/>
+    </xilinx:packagingInfo>
+  </spirit:vendorExtensions>
+</spirit:component>

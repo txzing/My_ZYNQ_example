@@ -1,0 +1,28 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Wed May 25 13:09:45 2022
+# Process ID: 31720
+# Current directory: C:/Users/txzing/Desktop/micro_7020/system_wrapper/vivado_proj
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent17344 C:\Users\txzing\Desktop\micro_7020\system_wrapper\vivado_proj\vivado_proj.xpr
+# Log file: C:/Users/txzing/Desktop/micro_7020/system_wrapper/vivado_proj/vivado.log
+# Journal file: C:/Users/txzing/Desktop/micro_7020/system_wrapper/vivado_proj\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/txzing/Desktop/micro_7020/system_wrapper/vivado_proj/vivado_proj.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/txzing/Desktop/micro_7020/system_wrapper/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/Vivado/2020.2/data/ip'.
+open_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:06 . Memory (MB): peak = 1180.117 ; gain = 0.000
+update_compile_order -fileset sources_1
+INFO: [Vivado 12-8217] Implementation run is out of date. Exported hardware information may be inconsistent with respect to the current state of the design. It is recommended that you re-run implementation and re-generate bitstream/PDI before doing hardware export.
+write_hw_platform -fixed -include_bit -force -file C:/Users/txzing/Desktop/micro_7020/system_wrapper/vivado_proj/system_wrapper.xsa
+INFO: [Vivado 12-4895] Creating Hardware Platform: C:/Users/txzing/Desktop/micro_7020/system_wrapper/vivado_proj/system_wrapper.xsa ...
+INFO: [Hsi 55-2053] elapsed time for repository (D:/Vivado/Vivado/2020.2/data\embeddedsw) loading 0 seconds
+INFO: [Vivado 12-12467] The Hardware Platform can be used for Hardware
+INFO: [Vivado 12-4896] Successfully created Hardware Platform: C:/Users/txzing/Desktop/micro_7020/system_wrapper/vivado_proj/system_wrapper.xsa
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed May 25 13:10:28 2022...

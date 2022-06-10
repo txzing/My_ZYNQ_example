@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Wed May 25 13:09:45 2022
+# Process ID: 31720
+# Current directory: C:/Users/txzing/Desktop/micro_7020/system_wrapper/vivado_proj
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent17344 C:\Users\txzing\Desktop\micro_7020\system_wrapper\vivado_proj\vivado_proj.xpr
+# Log file: C:/Users/txzing/Desktop/micro_7020/system_wrapper/vivado_proj/vivado.log
+# Journal file: C:/Users/txzing/Desktop/micro_7020/system_wrapper/vivado_proj\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/txzing/Desktop/micro_7020/system_wrapper/vivado_proj/vivado_proj.xpr
+update_compile_order -fileset sources_1
+write_hw_platform -fixed -include_bit -force -file C:/Users/txzing/Desktop/micro_7020/system_wrapper/vivado_proj/system_wrapper.xsa
