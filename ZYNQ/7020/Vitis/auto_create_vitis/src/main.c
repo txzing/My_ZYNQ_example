@@ -11,9 +11,9 @@
 #define MIO_KEY0 12  //PS_KEY0 连接到 MIO7
 #define MIO_KEY1 11  //PS_KEY1 连接到 MIO8
 
-#define EMIO_KEY_0 54  //PL_KEY0 连接到EMIO0
-#define EMIO_KEY_1 55  //PL_KEY1
-#define GPIO_INTR  56  //外部中断
+#define EMIO_KEY_0  56  //PL_KEY0 连接到EMIO0
+#define EMIO_LED_1  55  //PL_LED_1
+#define EMIO_LED_0  54  //PL_LED_0
 
 int main()
 {
@@ -40,11 +40,12 @@ int main()
     XGpioPs_SetDirectionPin(&gpiops_inst, MIO_KEY0, 0);
     XGpioPs_SetDirectionPin(&gpiops_inst, MIO_KEY1, 0);
     XGpioPs_SetDirectionPin(&gpiops_inst, EMIO_KEY_0, 0);
-    XGpioPs_SetDirectionPin(&gpiops_inst, EMIO_KEY_1, 0);
 
-    //外部触发引脚
-    XGpioPs_SetDirectionPin(&gpiops_inst, GPIO_INTR, 1);
-    XGpioPs_SetOutputEnablePin(&gpiops_inst, GPIO_INTR, 1);
+    //PL LED
+    XGpioPs_SetDirectionPin(&gpiops_inst, EMIO_LED_0, 1);
+    XGpioPs_SetOutputEnablePin(&gpiops_inst, EMIO_LED_0, 1);
+    XGpioPs_SetDirectionPin(&gpiops_inst, EMIO_LED_1, 1);
+    XGpioPs_SetOutputEnablePin(&gpiops_inst, EMIO_LED_1, 1);
 
     //读取按键状态，用于外部触发引脚翻转
     while(1){
@@ -54,7 +55,11 @@ int main()
         XGpioPs_WritePin(&gpiops_inst, MIO_LED1,
                 ~XGpioPs_ReadPin(&gpiops_inst, MIO_KEY1));
 
-        XGpioPs_WritePin(&gpiops_inst, GPIO_INTR,
+        XGpioPs_WritePin(&gpiops_inst, EMIO_LED_0,
+                ~XGpioPs_ReadPin(&gpiops_inst, EMIO_KEY_0));
+        XGpioPs_WritePin(&gpiops_inst, EMIO_LED_1,
+                ~XGpioPs_ReadPin(&gpiops_inst, EMIO_KEY_0));
+        XGpioPs_WritePin(&gpiops_inst, MIO_LED2,
                 ~XGpioPs_ReadPin(&gpiops_inst, EMIO_KEY_0));
 
         if(XGpioPs_ReadPin(&gpiops_inst, EMIO_KEY_0) == 0)
@@ -63,11 +68,6 @@ int main()
             printf("EMIO_KEY_0 TEST!\n");
         }
 
-        if(XGpioPs_ReadPin(&gpiops_inst, EMIO_KEY_1) == 0)
-        {
-
-            printf("EMIO_KEY_1 TEST!\n");
-        }
 
     }
 

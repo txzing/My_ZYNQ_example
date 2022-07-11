@@ -1,7 +1,0 @@
-set_property SRC_FILE_INFO {cfile:D:/workdir/Git_repository_FPGA/ZYNQ/7020/Vivado/vivado_proj/vivado_proj.srcs/constrs_1/imports/xdc/system.xdc rfile:../../../vivado_proj.srcs/constrs_1/imports/xdc/system.xdc id:1} [current_design]
-set_property src_info {type:XDC file:1 line:7 export:INPUT save:INPUT read:READ} [current_design]
-set_property -dict {PACKAGE_PIN J18 IOSTANDARD LVCMOS33} [get_ports {EMIO_tri_io[0]}]
-set_property src_info {type:XDC file:1 line:9 export:INPUT save:INPUT read:READ} [current_design]
-set_property -dict {PACKAGE_PIN H18 IOSTANDARD LVCMOS33} [get_ports {EMIO_tri_io[1]}]
-set_property src_info {type:XDC file:1 line:11 export:INPUT save:INPUT read:READ} [current_design]
-set_property -dict {PACKAGE_PIN L20 IOSTANDARD LVCMOS33} [get_ports {EMIO_tri_io[2]}]
